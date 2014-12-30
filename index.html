@@ -1,23 +1,398 @@
----
-layout: default
----
 
-<div class="home">
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+      <title>BryanKaraffa.com</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>          <!-- Bootstrap core CSS -->        <!-- Latest compiled and minified CSS -->     
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+      <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+      <!-- Optional theme -->     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>    <script type="text/javascript">        $.widget.bridge('uitooltip', $.ui.tooltip);        </script>      <!-- Latest compiled and minified JavaScript -->     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>      <!-- Custom styles for this template -->      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->     <!--[if lt IE 9]>       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>     <![endif]-->     
+      <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,900" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
-  <h1 class="page-heading">Posts</h1>
+   </head><style type="text/css">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  	html, body 
+{
+	     font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnRegular', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+	     -webkit-font-smoothing: antialiased;
+	     height: 100%;
+	     text-rendering: optimizeLegibility;
+	     font-smoothing: antialiased;
+	    
+}
+	   a 
+{
+	 color:inherit;
+	 
+}
+	 a:hover 
+{
+	 color:inherit;
+	 
+}
+	     h1 
+{
+	        font-weight:300 !important;
+	     
+}
+	     h2 
+{
+	       font-weight: 300 !important;
+	     
+}
+	         h3 
+{
+	       font-weight: 300 !important;
+	      
+}
+	     h4,p 
+{
+	        color:#333;
+	        font-weight: 300;
+	        font-size:20px;
+	        line-height: 26px;
+	     
+}
+	     .jumbotop 
+{
+	       background-color:#325a7a;
+	           
+}
+	     .whitetext 
+{
+	       color:white !important;
+	     
+}
+	     .navbartrans 
+{
+	       background-color:transparent !important;
+	       border-bottom:0px !important;
+	     
+}
+	     .devpresslogo 
+{
+	       font-family: Georgia, Times, 'Times New Roman', serif;
+	     
+}
+	      .backgroundfract 
+{
+	        background: url(http://s3.amazonaws.com/bootland/bgtrianglify.svg) no-repeat center center ;
+	      
+}
+	     .jumbotop 
+{
+	/*	       padding-top: 120px !important;
+	       padding-bottom: 120px !important;*/
+	                background-color:#95a6b6;
+	       -webkit-background-size: 30%;
+	      -moz-background-size: 30%;
+	      -o-background-size: 30%;
+	      background-size: 30%;
+	            
+}
+	     .opacity07 
+{
+	       opacity: 0.9;
+	     
+}
+	     .transinput 
+{
+	       background-color:transparent;
+	       border:1px solid rgba(255,255,255,0.2);
+	     
+}
+	     .fronticon 
+{
+	       font-size:80px;
+	     
+}
 
-</div>
+	     .btn-trans 
+{
+	       background-color:transparent;
+	       border:1px solid rgba(255,255,255,0.9);
+	       color:white;
+	     
+}
+	     .btn-trans:hover 
+{
+	       border:1px solid rgba(255,255,255,0.9);
+	       color:white;
+	     
+}
+	     .btn-trans a:hover 
+{
+	              background-color:rgba(255,255,255,0.9);
+	      
+}
+	      .container 
+{
+	        max-width:992px;
+	     
+}
+	     .secondtext 
+{
+	       color:#878787;
+	     
+}
+	     .logotext 
+{
+	           text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+	      
+}
+	     .fronttext 
+{
+	       font-size:85px !important;
+	       font-weight:600 !important;
+	       opacity: 0.9;
+	     
+}
+	     .greycontainer 
+{
+	       background-color:red;
+	     
+}
+	     .jumbotron 
+{
+	     /* box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 610px 155px inset;
+	     -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 610px 155px inset;
+	     -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 610px 155px inset;
+	*/     background-repeat: no-repeat !important;
+	   background-position: center center !important;
+	    /* -webkit-transform: scale(1.1);
+	 */    width: 100%;
+	   -webkit-background-size: 100%;
+	      -moz-background-size: 100%;
+	      -o-background-size: 100%;
+	      background-size: 100%;
+	 #     -webkit-background-size: cover;
+	      -moz-background-size: cover;
+	      -o-background-size: cover;
+	      background-size: cover;
+	   
+	 text-align: center;
+	 position: relative;
+	 margin-bottom:0px;
+	      
+}
+	 .darkjumbo 
+{
+	  
+}
+	 .darkjumbo:after 
+{
+	   background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.8),rgba(0,0,0,0.3));
+	 background-image: linear-gradient(to top, rgba(0,0,0,0.8),rgba(0,0,0,0.3));
+	 position: absolute;
+	 right: 0px;
+	 bottom: 0px;
+	 left: 0px;
+	 display: block;
+	 pointer-events: none;
+	 content: '';
+	 width: 100%;
+	 height: 100%;
+	 z-index: 1;
+	 
+}
+	    .container 
+{
+	     z-index: 2;
+	     position: relative;
+	    
+}
+	  .navbar 
+{
+	   color: rgba(255,255,255,0.8) !important;
+	 border-color: transparent !important;
+	  z-index: 10;
+	
+	 border-radius: 0px  !important;
+	 margin-bottom: 0px !important;
+	 
+}
+
+	  .jumbotron .container 
+{
+	   max-width:992px;
+	 
+}
+	  .jumbotron .editingbuttons 
+{
+	   top:10px !important;
+	   margin-right:10px;
+	 
+}
+	 .row 
+{
+	   border-bottom:1px solid #eee;
+	   padding-top:50px;
+	   padding-bottom:50px;
+	 
+}
+	 .mobilejumbotron 
+{
+	 padding-top:50px !important;
+	 padding-bottom:50px !important;
+
+}
+.mobilejumbotroncoltext 
+{
+	 
+}
+.mobilejumbotronimg 
+{
+	  max-width: 300px;
+
+}
+
+.bootlanderlogo {
+  background: -webkit-linear-gradient(#FFF, #E9E9E9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   font-family: 'Pacifico', cursive;
+}
+.white {
+    color:white;
+}
+
+.glow {
+    -webkit-box-shadow: 0 0 30px rgba(255,255,255,0.6);
+-moz-box-shadow: 0 0 30px rgba(255,255,255,0.6);
+box-shadow: 0 0 30px rgba(255,255,255,0.6);
+}
+
+.glowtext {
+        text-shadow: 0 0 30px rgba(255,255,255,0.6), 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+    
+ .shadow {
+   -moz-box-shadow:    inset 0 0 50px #FFFFFF;
+   -webkit-box-shadow: inset 0 0 50px #FFFFFF;
+   box-shadow:         inset 30 30 50px #FFFFFF;
+}
+
+
+
+
+</style><body>
+        
+        
+        
+         <!-- MAIN JUMBO -->
+         <div class="jumbotron darkjumbo jumbotop editcontainer site-wrapper" id="bigimage" style="background-image:url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_528c8f581f45e_1.JPG')">
+            <div class="container text-center">
+              <p>&nbsp;</p>
+               <p>&nbsp;</p>
+              <h1><span style="color: rgb(255, 255, 255); font-weight: bold;">Hello World!</span></h1>  
+
+              <h1><span style="color: rgb(255, 255, 255); font-weight: bold;">My name is Bryan Karaffa</span></h1>
+
+              <h4><span style="color: rgb(255, 255, 255);">This is what I do.</span></h4>
+              <br>
+               <a href="#about" class="btn btn-lg  btn-success" role="button">Tell me more! »</a>
+               <p>&nbsp;</p>
+                <p>&nbsp;</p>
+
+            </div>
+         </div>  
+
+        <!-- 3 FEATURE ROW -->
+
+         <div class="container editcontainer">
+          
+
+            <!-- Row of columns -->       
+            <div class="row">
+               <h1 class="text-center edittext">Professional Services &amp; Skills</h1>
+               <p>&nbsp;</p>
+               <div class="col-md-4">
+                  <center><img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-wrench.svg" style="width:100px;height:100px"><br><h2>System Administration</h2>
+                  </center>
+                  <p>My background is in computer science and I have plenty of experience designing and maintaining an diverse array of IT systems.<br>
+                  Always attemping to replace the need for onsite operations staff with IT engineering.</p>
+               </div>
+               <div class="col-md-4">
+                  <center><img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-cloud.svg" style="width:100px;height:100px"><br><h2>Web Development</h2>
+                  </center>
+                  <p>I thoroughly enjoy developing web apps &amp; APIs, taking on side projects, and working to keep up on the latest web innovations.
+                    <br>
+                    </p>      
+               </div>
+               <div class="col-md-4">
+                  <center><img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-map.svg" style="width:100px;height:100px"><br><h2>GIS &amp; Map Production</h2>
+                  </center>
+                  <p>I have a B.A., in Geography with an emphasis in Geographic Information Science.<br>
+                    Specifically, I enjoy developing server-side geographic information services and applications.
+                   </p>       
+               </div>
+            </div>
+         
+     </div>
+<!-- STANDOUT ROW -->
+<div class="jumbotron lightjumbo site-wrapper shadow" id="currentproject" style="background-image:url('http://i.imgur.com/f9PZCQM.jpg');">
+            <div class="container text-center">
+              <h1><span style="font-weight: bold;"><i>Current Project</i></span></h1>
+                <p style="font-weight:bold;">
+                    I am currently working on the <a href="http://map.geog.ucsb.edu" target="_blank"><u><b>UCSB Interactive Campus Map</u></b></a> which I developed during my studies and employment at <a href="http://geog.ucsb.edu">UC Santa Barbara</a>.  It is a custom web app developed in PHP/HTML/CSS and leverages Esri's ArcGIS Suite including ArcGIS Server, ArcGIS API for JavaScript for the GIS functionality.</p>
+            </div>
+         </div>
+
+<!-- STANDOUT ROW -->
+         <div class="container editcontainer">
+           
+            <div class="row text-center">
+            <a href="//linkedin.com/in/bryankaraffa" target="_blank"><img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-social-linkedin.svg" style="width:100px;height:100px"></a>
+                
+            <a href="//fb.com/bryankaraffa" target="_blank">
+                <img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-social-facebook.svg" style="width:100px;height:100px"></a>
+                
+            <a href="//plus.google.com/+BryanKaraffa" target="_blank">
+                <img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-social-google-plus.svg" style="width:100px;height:100px"></a>
+                
+            <a href="//github.com/bryankaraffa" target="_blank">
+                <img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-social-github.svg" style="width:100px;height:100px"></a>
+                
+            <a href="//open.spotify.com/user/akakaffa" target="_blank">
+                <img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-social-spotify.svg" style="width:100px;height:100px"></a>
+            <br>
+                <h1>Looking for more ?</h1>
+               <p>I have profiles on most of the major social networking sites including LinkedIn, Facebook, Google Plus, GitHub, and Spotify.</p>
+            </div>
+         
+         </div>
+              
+
+          <!-- FEATURE ROW -->
+    
+         <div class="container">
+            <!-- Example row of columns -->       
+        
+            <div class="row">
+               <div class="col-md-12">
+                  <h1><img src="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-comment-quotes.svg" style="width:50px;height:50px">&nbsp;&nbsp;Feel free to contact me!</h1>
+                  <br>       
+                  <p>The best way to get ahold of me is to e-mail me. &nbsp;My e-mail address is simply my name,&nbsp;<br><span style="text-decoration: underline;">Bryan</span> <span style="text-decoration: underline;">Karaffa</span> <span style="text-decoration: underline;">@</span> <span style="text-decoration: underline;">gmail.com</span>&nbsp;with no spaces.</p>
+               </div>
+            </div>
+         
+         </div>     
+
+    
+              
+<!-- FOOTER -->
+      
+      
+</body></html>
